@@ -24,7 +24,7 @@ There have been two groups of existing sequential models: user- and item-centric
 ### Personalized Interest Sustainability with supplementaion schemes
 We formulate a task to predict which items each user will consume in the recent period of the training time based on users' consumption history. We then devise simple yet effective schemes to supplement users’ sparse consumption history in both intrinsic and extrinsic manners.
 
-<p align="center"><img src="images/model.png" alt="graph" width="75%"></p>
+<p align="center"><img src="images/model.png" alt="graph" width="85%"></p>
 
 ### Recommendation Performance
 PERIS significantly outperforms the baseline models including the general, user-centric, and item-centric sequential models on the 11 real-world datasets. This result indicates the effectiveness of incorporating the  Personalized Interest Sustainability.
