@@ -17,12 +17,12 @@
 
 ## Overview
 ### Sequential Recommender Systems
-There have been two groups of existing sequential models. The user-centric models capture personalized interest drift based on each user's sequential consumption history, but do not explicitly consider whether users' interest in items sustains beyond the training time, i.e., interest sustainability. On the other hand, the item-centric models consider whether users' general interest sustains after the training time, but it is not personalized. In this work, we propose a recommender system taking advantages of the models in both categories.
+There have been two groups of existing sequential models: user- and item-centric models. This work proposes a recommender system taking advantages of the models in both categories.
 
 <p align="center"><img src="images/intro_comparison.png" alt="graph" width="45%"></p>
 
 ### Personalized Interest Sustainability
-Our proposed model (PERIS) captures personalized interest sustainability, indicating whether each user's interest in items will sustain beyond the training time or not. We first formulate a task that requires to predict which items each user will consume in the recent period of the training time based on users' consumption history.
+Our proposed model (PERIS) captures personalized interest sustainability (PIS), indicating whether each user's interest in items will sustain beyond the training time or not. We formulate a task to predict which items each user will consume in the recent period of the training time based on users' consumption history.
 
 <p align="center"><img src="images/pisp.png" alt="graph" width="45%"></p>
 
