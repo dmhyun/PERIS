@@ -19,21 +19,21 @@
 ### Sequential Recommender Systems
 There have been two groups of existing sequential models. The user-centric models capture personalized interest drift based on each user's sequential consumption history, but do not explicitly consider whether users' interest in items sustains beyond the training time, i.e., interest sustainability. On the other hand, the item-centric models consider whether users' general interest sustains after the training time, but it is not personalized. In this work, we propose a recommender system taking advantages of the models in both categories.
 
-<p align="center"><img src="images/intro_comparison.png" alt="graph" width="50%"></p>
+<p align="center"><img src="images/intro_comparison.png" alt="graph" width="40%"></p>
 
 ### Personalized Interest Sustainability
 Our proposed model (PERIS) captures personalized interest sustainability, indicating whether each user's interest in items will sustain beyond the training time or not. We first formulate a task that requires to predict which items each user will consume in the recent period of the training time based on users' consumption history.
 
-<p align="center"><img src="images/pisp.png" alt="graph" width="50%"></p>
+<p align="center"><img src="images/pisp.png" alt="graph" width="40%"></p>
 
 ### Supplementation schems for users' sparse history
 It is non-trivial to predict items that each user is likely to consume in the recent period of the training time because most users have insufficient consumption history per item. We hence devise simple yet effective schemes to supplement users’ sparse consumption history in both intrinsic and extrinsic manners.
 
-<p align="center"><img src="images/supp.png" alt="graph" width="80%"></p>
+<p align="center"><img src="images/supp.png" alt="graph" width="40%"></p>
 
 ### Recommendation Performance
 PERIS significantly outperforms the baseline models including the general, user-centric, and item-centric sequential models on the 11 real-world datasets. This result indicates the effectiveness of incorporating the PIS, i.e., whether each user’s interest in items will sustain beyond the training time, over various domains.
-<p align="center"><img src="images/performance.png" alt="graph" width="90%"></p>
+<p align="center"><img src="images/performance.png" alt="graph" width="60%"></p>
 
 
 ## Major Requirements
