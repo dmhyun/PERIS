@@ -27,7 +27,7 @@ We formulate a task to predict which items each user will consume in the recent 
 <p align="center"><img src="images/model.png" alt="graph" width="85%"></p>
 
 ### Recommendation Performance
-PERIS significantly outperforms the baseline models including the general, user-centric, and item-centric sequential models on the 11 real-world datasets. This result indicates the effectiveness of incorporating the  Personalized Interest Sustainability.
+PERIS significantly outperforms baseline models including general, user-centric, and item-centric sequential models on 11 real-world datasets. This result indicates the effectiveness of the personalized interest sustainability.
 <p align="center"><img src="images/performance.png" alt="graph" width="65%"></p>
 
 
