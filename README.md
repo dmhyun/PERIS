@@ -61,11 +61,11 @@ Train the proposed recommender system (PERIS).
 ## Citation
 If you use this repository for your work, please consider citing [our paper](https://arxiv.org/pdf/2209.06644):
 
-<pre><code>@article{2209.06644,
-Author = {Dongmin Hyun, Chanyoung Park, Junsu Cho, and Hwanjo Yu},
-Title = {Beyond Learning from Next Item: Sequential Recommendation via Personalized Interest Sustainability},
-Year = {2022},
-Eprint = {arXiv:2209.06644},
-Doi = {10.1145/3511808.3557415},
+<pre><code>@inproceedings{hyun2022beyond,
+  title={Beyond Learning from Next Item: Sequential Recommendation via Personalized Interest Sustainability},
+  author={Hyun, Dongmin and Park, Chanyoung and Cho, Junsu and Yu, Hwanjo},
+  booktitle={Proceedings of the 31st ACM International Conference on Information \& Knowledge Management},
+  pages={812--821},
+  year={2022}
 }
 </code></pre>
