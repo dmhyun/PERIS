@@ -41,12 +41,14 @@ PERIS significantly outperforms baseline models including general, user-centric,
     * [Amazon](http://jmcauley.ucsd.edu/data/amazon/)
       <pre>[Example] <code>wget http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/ratings_Cell_Phones_and_Accessories.csv</code></pre>
     * [Yelp](https://www.yelp.com/dataset)
-    * [Google Maps](cseweb.ucsd.edu/~jmcauley/datasets.html)
+    * [Google Maps](https://drive.google.com/file/d/1blHLlSGf2i2NxC-EIUyqcnaLErZtt3KH/view?usp=share_link)
     * Other data you want
 
     :exclamation: *Please make sure your data in the same csv format of Amazon data.*
     
-    
+    * For Yelp and Google datasets, run the following code to transform the data format.
+    <pre><code>python preprocess_yelp.py YELP_DATA.json</code></pre>
+    <pre><code>python preprocess_google.py reviews.clean.json</code></pre>
  
  2. Split your data into training/validation/test data in `./data/`.
    <pre><code>python split_data.py your_decompressed_file.csv</code></pre>
