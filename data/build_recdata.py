@@ -72,7 +72,7 @@ def build_hist(uirt): # NOTE: this UIRT extracted from only the training data
         
     return userhist, itemhist, neighborhist
 
-def build_hist_neighbor(uirt, order): 
+""" def build_hist_neighbor(uirt, order): 
 
     nuit_dict = {}
     for u, i, _, t in uirt:
@@ -83,11 +83,8 @@ def build_hist_neighbor(uirt, order):
 
         unit_dict[u][i] = consumed_times
 
-
-
-    
     pdb.set_trace()
-
+ """
 
 
 def replace_id2idx(trn, vld, tst):
@@ -182,20 +179,6 @@ item_index = [i[1] for i in trndata]
 n_users = max(user_index)+1
 n_items = max(item_index)+1
 
-# # Compute the neighbor relation 
-# print("\nGenerating adjacency matrix")
-# s = time()
-# intM = csr_matrix((np.ones(len(user_index)), (user_index, item_index)),
-#                                shape=(n_users, n_items)) 
-# adj_mat = sp.dok_matrix((n_users + n_items, n_users + n_items), dtype=np.float32)
-# adj_mat = adj_mat.tolil()
-# R = intM.tolil()
-# adj_mat[:n_users, n_users:] = R
-# adj_mat[n_users:, :n_users] = R.T
-# # adj_mat = adj_mat.todok()
-# end = time()
-# print("costing {:.2}s for computing the adjacency matrix".format(end-s))
-
 print('\nBuilding user-SeqHist dictionary')
 userhist, itemhist, neighborhist = build_hist(trndata)
 userhist_wvld, itemhist_wvld, neighborhist_wvld = build_hist(trndata+org_vlddata)
@@ -213,8 +196,6 @@ np.save(open(data_path+'tst','wb'), np.array(tstdata).astype(float).astype(int))
 # Below dictionaries are for recovering the origial user and item names
 np.save(open(data_path+'user_dict','wb'), user2id_dict)
 np.save(open(data_path+'item_dict','wb'), item2id_dict)
-# Save neighborhood info.
-# sp.save_npz(data_path + '/1order.npz', adj_mat.tocsr())
 # Save user-SeqHist 
 np.save(open(data_path+'userhist','wb'), userhist)
 np.save(open(data_path+'userhist_wvld','wb'), userhist_wvld)
