@@ -57,8 +57,15 @@ PERIS significantly outperforms baseline models including general, user-centric,
  <pre><code>python build_recdata.py generated_directory </code></pre>
  
  ## Training    
-Train the proposed recommender system (PERIS).
- <pre><code>python train.py --dataset your_dataset --learning_rate 1e-3 --lamb 0.5 --mu 0.3 --K 128 </code></pre>
+Train a recommender system with a model name.
+<pre><code>python train.py --model_name peris --dataset your_dataset --learning_rate 1e-3 --lamb 0.5 --mu 0.3 --K 128 </code></pre>
+ 
+### Available models 
+
+| Model  | Paper | Conference |
+| ------------- | ------------- | ------------- |
+| peris  | [Beyond Learning from Next Item: Sequential Recommendation via Personalized Interest Sustainability](https://dl.acm.org/doi/abs/10.1145/3511808.3557415)  | CIKM'22  |
+| lsan  | [Lightweight Self-Attentive Sequential Recommendation](https://dl.acm.org/doi/abs/10.1145/3459637.3482448)  | CIKM'21  |
  
 ## Citation
 If you use this repository for your work, please consider citing [our paper](https://arxiv.org/pdf/2209.06644):
