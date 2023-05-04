@@ -66,6 +66,7 @@ Train a recommender system with a model name.
 | ------------- | ------------- | ------------- |
 | peris  | [Beyond Learning from Next Item: Sequential Recommendation via Personalized Interest Sustainability](https://dl.acm.org/doi/abs/10.1145/3511808.3557415)  | CIKM'22  |
 | lsan  | [Lightweight Self-Attentive Sequential Recommendation](https://dl.acm.org/doi/abs/10.1145/3459637.3482448)  | CIKM'21  |
+| simplex  | [SimpleX: A Simple and Strong Baseline for Collaborative Filtering](https://dl.acm.org/doi/abs/10.1145/3459637.3482448)  | CIKM'21  |
  
 ## Citation
 If you use this repository for your work, please consider citing [our paper](https://arxiv.org/pdf/2209.06644):
