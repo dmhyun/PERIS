@@ -6,9 +6,10 @@ import numpy as np
 import argparse
 import random
 import pickle
-from models import PERIS
+from models import PERIS, LSAN, SIMPLEX
 from metric import cal_measures, get_each_score, get_logit, get_pis
 from dataloaders.dataloader_seqrs import DataLoader_seq
+from dataloaders.dataloader_L_sequential import DataLoader as DataLoader_LSQ
 
 torch.set_num_threads(1)
 
@@ -20,7 +21,10 @@ class Instructor:
     def __init__(self, opt):
         self.opt = opt                        
 
-        self.data_loader = DataLoader_seq(self.opt)                        
+        if opt.model_name == 'peris':
+            self.data_loader = DataLoader_seq(self.opt)                        
+        elif opt.model_name in ['lsan', 'simplex']:
+            self.data_loader = DataLoader_LSQ(self.opt)
 
         self.trn_loader, self.vld_loader, self.tst_loader = self.data_loader.get_loaders()
         
@@ -220,6 +224,10 @@ if __name__ == '__main__':
     parser.add_argument('--warmup_epochs', default=5, type=int)
     parser.add_argument('--aggtype', default='max', type=str, help='sum, mean, max')
     parser.add_argument('--maxhist', default=100, type=int) # The maximum # of consumed items per user
+    parser.add_argument('--dropout', default=0.0, type=float) 
+    parser.add_argument('--num_layer', default=1, type=int) 
+    parser.add_argument('--num_next', default=1, type=int) 
+    parser.add_argument('--kernel_size', default=5, type=int) 
     
     opt = parser.parse_args()   
 
@@ -229,6 +237,8 @@ if __name__ == '__main__':
     
     model_classes = {         
         'peris':PERIS, 
+        'lsan':LSAN, 
+        'simplex':SIMPLEX, 
     }  
     
     dataset_path = './data/{}/rec'.format(opt.dataset)    

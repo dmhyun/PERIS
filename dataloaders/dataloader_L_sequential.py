@@ -133,6 +133,7 @@ class SEQ_Dataset(data.Dataset):
                     
                     if dtype == 'tst' and u in self.vldudict: seq += self.vldudict[u]
                                                 
+                    seqfeature = seq[-L:]
                     seqfeature = [0] * (L - len(seqfeature)) + seq[-L:]
                 else: # New user case
                     seqfeature = np.zeros(L)
